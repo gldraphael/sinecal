@@ -1,0 +1,81 @@
+package main
+
+func main() {
+	tune := []Note{
+
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("E4"), Duration: 1},
+		{Pitch: Parse("D4"), Duration: 1},
+		{Pitch: Parse("C4"), Duration: 1},
+		{Pitch: Parse("D4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 2},
+
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("C5"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 2},
+
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("E4"), Duration: 1},
+		{Pitch: Parse("D4"), Duration: 1},
+		{Pitch: Parse("C4"), Duration: 1},
+		{Pitch: Parse("D4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 2},
+
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("E4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 2},
+
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 2},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 2},
+
+		{Pitch: Parse("C5"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("E4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 2},
+
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 2},
+
+		{Pitch: Parse("C5"), Duration: 1},
+		{Pitch: Parse("Bb4"), Duration: 2},
+		{Pitch: Parse("C5"), Duration: 1},
+		{Pitch: Parse("D5"), Duration: 1},
+		{Pitch: Parse("A4"), Duration: 2},
+		{Pitch: Parse("G4"), Duration: 1},
+		{Pitch: Parse("F4"), Duration: 1},
+		{Pitch: Parse("G4"), Duration: 2},
+		{Pitch: Parse("F4"), Duration: 4},
+	}
+	Play(tune)
+}

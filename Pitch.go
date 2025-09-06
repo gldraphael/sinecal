@@ -20,18 +20,18 @@ func (p Pitch) isValid() error {
 	noteName := strings.ToUpper(string(p.Name[0]))
 
 	if noteName < "A" || noteName > "G" {
-		return errors.New(fmt.Sprintf("The note name %s must be between A and G", noteName))
+		return fmt.Errorf("The note name %s must be between A and G", noteName)
 	}
 	if p.Octave < 0 || p.Octave > 8 {
-		return errors.New(fmt.Sprint("The octave %n must be between 0 and 8", p.Octave))
+		return fmt.Errorf("The octave %d must be between 0 and 8", p.Octave)
 	}
 
 	// Special case: only C is allowed in octave 8, and no notes below A in octave 0
 	if p.Octave == 8 && noteName != "C" {
-		return errors.New(fmt.Sprintf("The octave %d must be between 0 and 8", p.Octave))
+		return fmt.Errorf("The octave %d must be between 0 and 8", p.Octave)
 	}
 	if p.Octave == 0 && noteName > "B" {
-		return errors.New(fmt.Sprint("Octave 0 currently only supports A, A#/Bb, B"))
+		return fmt.Errorf("Octave 0 currently only supports A, A#/Bb, B")
 	}
 
 	// TODO: validate sharps & flats...

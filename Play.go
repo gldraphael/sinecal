@@ -5,8 +5,10 @@ import (
 	"github.com/gopxl/beep/v2/speaker"
 )
 
-func Play(notes []Note) {
+func Play(tune Tune) {
 	speaker.Init(SampleRate, 4800)
+
+	notes := tune
 
 	ch := make(chan struct{})
 	sounds := make([]beep.Streamer, len(notes))

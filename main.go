@@ -1,16 +1,16 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 func main() {
-	tune := `
-	F4-4  E4-4  D4-4  C4-4  D4-4 F4-4  G4-4  F4-2
-	A4-4  C5-4  Bb4-4 G4-4  A4-4 G4-4  F4-4  A4-4 G4-2
-	F4-4  E4-4  D4-4  C4-4  D4-4 F4-4  G4-4  F4-2
-	A4-4  G4-4  Bb4-4 A4-4  G4-4 E4-4  G4-4  F4-2
-	F4-4  G4-4  A4-4  A4-4  G4-4  A4-4 Bb4-4 A4-2
-	C5-4  Bb4-4 A4-4  G4-4  F4-4 E4-4  G4-4  F4-2
-	Bb4-4 A4-4  G4-4  Bb4-4 A4-4 G4-4  F4-4  G4-4 A4-2
-	C5-4  Bb4-4 Bb4-4 C5-4  D5-4 A4-2        A4-4 G4-4 F4-4
-	G4-2        F4-1
-	`
-	Play(ParseTune(tune))
+	tune, err := os.ReadFile("./assets/tunes/main.tune")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	Play(ParseTuneFromBytes(tune))
 }

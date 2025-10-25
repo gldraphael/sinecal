@@ -7,6 +7,10 @@ import (
 
 type Tune []Note
 
+func ParseTuneFromBytes(tune []byte) Tune {
+	return ParseTune(string(tune))
+}
+
 /*
 * Parses a string representation of a tune.
 *
